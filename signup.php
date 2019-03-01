@@ -2,51 +2,12 @@
     include_once 'header.php';
 ?>
 <section class="main-container">
-    <article class=""index-form">
+    <article class="index-form">
         <div class="container" style="padding-top: 15px">
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
                     <form class="signup-form" action="includes/db_signup.php" method="POST">
-
-                        <!-- <div class="form-group">
-                            <label for="name">Gender  (*):</label>
-                            <?php
-                                if(isset($_GET['customRadioInline1'])) {
-                                    $gender = $_GET['customRadioInline1'];
-                                    if($gender =="M") {
-                                        echo '<div class="custom-control custom-radio custom-control-inline">'.
-                                            ' <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked="checked" value="M">'.
-                                            ' <label class="custom-control-label" for="customRadioInline1">Male</label></div>'.
-                                            '<div class="custom-control custom-radio custom-control-inline">'.
-                                            '<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="F">'.
-                                            '<label class="custom-control-label" for="customRadioInline2">Female</label></div>';
-                                    } elseif($gender =="F") {
-                                        echo '<div class="custom-control custom-radio custom-control-inline">'.
-                                            ' <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" value="M">'.
-                                            ' <label class="custom-control-label" for="customRadioInline1">Male</label></div>'.
-                                            '<div class="custom-control custom-radio custom-control-inline">'.
-                                            '<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" checked="checked" value="F">'.
-                                            '<label class="custom-control-label" for="customRadioInline2">Female</label></div>';
-                                    } else {
-                                        echo '<div class="custom-control custom-radio custom-control-inline">'.
-                                            ' <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" value="M">'.
-                                            ' <label class="custom-control-label" for="customRadioInline1">Male</label></div>'.
-                                            '<div class="custom-control custom-radio custom-control-inline">'.
-                                            '<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="F">'.
-                                            '<label class="custom-control-label" for="customRadioInline2">Female</label></div>';
-                                    }
-                                } else {
-                                    echo '<div class="custom-control custom-radio custom-control-inline">'.
-                                            ' <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" value="M">'.
-                                            ' <label class="custom-control-label" for="customRadioInline1">Male</label></div>'.
-                                        '<div class="custom-control custom-radio custom-control-inline">'.
-                                            '<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="F">'.
-                                            '<label class="custom-control-label" for="customRadioInline2">Female</label></div>';
-                                }
-                            ?>
-
-                        </div> -->
                         <div class="form-group">
                             <label for="name">Name  (*):</label>
                             <?php
