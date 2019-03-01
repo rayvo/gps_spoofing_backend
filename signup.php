@@ -108,22 +108,22 @@
                           exit();
                       } else {
                           $signupCheck = $_GET['signup'];
-                          if ($signupCheck == "sex") {
-                              echo "<p class='text-danger'> You did not select the gender!";
-                              exit();
-                          }
+                        //   if ($signupCheck == "sex") {
+                        //       echo "<p class='text-danger'> You did not select the gender!";
+                        //       exit();
+                        //   }
                           if ($signupCheck == "empty") {
                               echo "<p class='text-danger'> You did not fill in all required fields(*)!";
                               exit();
                           }
-                          if ($signupCheck == "username") {
-                              echo "<p class='text-danger'> Username must be in alphabet letters or numbers!";
-                              exit();
-                          }
-                          if ($signupCheck == "usertaken") {
-                              echo "<p class='text-danager'> Username has been already taken!";
-                              exit();
-                          }
+                        //   if ($signupCheck == "username") {
+                        //       echo "<p class='text-danger'> Username must be in alphabet letters or numbers!";
+                        //       exit();
+                        //   }
+                        //   if ($signupCheck == "usertaken") {
+                        //       echo "<p class='text-danager'> Username has been already taken!";
+                        //       exit();
+                        //   }
                           if ($signupCheck == "email") {
                               echo "<p class='text-danger'> You did not fill a valid email!";
                               exit();

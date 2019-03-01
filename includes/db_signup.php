@@ -55,7 +55,6 @@ if (isset($_POST['submit'])) {
                         exit();
                     } else {
                         echo "INSERTED ERROR: " . $sql . "<br>" . $conn->error;
-                        header("Location: ../signup.php?signup=empty&name=$name&password=$password&conf_password=$conf_password&email=$email&phone=$phone");
                         header("Location: ../signup.php?signup=database&customRadioInline1=$gender&firstname=$firstname&lastname=$lastname&username=$username&password=$password&conf_password=$conf_password&email=$email&cellphone=$cellphone&birthday=$birthday&address=$address");
                         exit();
                     }
