@@ -13,7 +13,7 @@ require "UserTracking.php";
 $dbServername = "localhost";
 //$dbServername = "210.105.48.120";
 $dbUsername = "root";
-$dbPassword = "";
+$dbPassword = "suny@1201";
 
 //$dbUsername = "clubadmin";
 //$dbPassword = "c123456f";

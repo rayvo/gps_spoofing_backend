@@ -51,6 +51,7 @@ include_once 'includes/dbhelper.php';
                                 <th>provider</th>
                                 <th>last_updated</th>
                                 <th>location_raw</th>                                
+                                <th>scenario</th>                                
                             </tr>
 						</thead>
 						<tbody>
@@ -65,6 +66,7 @@ include_once 'includes/dbhelper.php';
 									<td><?php echo $row['provider']; ?></td>
 									<td><?php echo $row['last_updated']; ?></td>
 									<td><?php echo $row['location_raw']; ?></td>                                    
+									<td><?php echo $row['scenario']; ?></td>                                    
                                 </tr>
                             <?php endwhile; ?>
 

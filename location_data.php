@@ -39,24 +39,35 @@ if (!is_array($decoded)) {
 //Process the JSON***********************
 $clubDevice = null;
 $clubDeviceId = null;
+echo "TEST:" . $decoded;
 foreach ($decoded as $k => $v) {
     //m_log("TY");
     $type = $v['type'];
-    $lat = $v['lat'];
-    $lng = $v['lng'];
-    $accuracy = $v['accuracy'];
-    $extra = $v['extra'];
-    $status = $v['status'];
-    $provider = $v['provider'];
-    $last_updated = $v['last_updated'];
-    $location_raw = $v['location_raw'];
-    if ($type == 1) { //Data from GPS
-        $sql = "INSERT INTO gps_data(lat,lng, accuracy, extra, status, provider, last_updated, location_raw) " .
-            " VALUES ('$lat','$lng', '$accuracy', '$extra', '$status', '$provider', '$last_updated', '$location_raw');";
-    } else { //Data from GSM
-        $sql = "INSERT INTO gsm_data(lat,lng, accuracy, extra, status, provider, last_updated, location_raw) " .
-            " VALUES ('$lat','$lng', '$accuracy', '$extra', '$status', '$provider', '$last_updated', '$location_raw');";
-    }
+    if ($type == 2) {//Data from nmea
+		$message = $v['message'];
+		$timestamp = $v['timestamp'];
+		$SNR = $v['SNR'];
+        	$sql = "INSERT INTO nmea_data(message, timestamp, SNR) " .
+            	" VALUES ('$message', '$timestamp', '$SNR');";
+    } else {
+		$lat = $v['lat'];
+    		$lng = $v['lng'];
+    		$accuracy = $v['accuracy'];
+    		$extra = $v['extra'];
+    		$status = $v['status'];
+    		$provider = $v['provider'];
+    		$last_updated = $v['last_updated'];
+    		$location_raw = $v['location_raw'];
+    		$scenario = $v['scenario'];
+    		$is_fake = $v['is_fake'];
+    		if ($type == 1) { //Data from GPS
+        		$sql = "INSERT INTO gps_data(lat,lng, accuracy, extra, status, provider, last_updated, location_raw, scenario, is_fake) " .
+            		" VALUES ('$lat','$lng', '$accuracy', '$extra', '$status', '$provider', '$last_updated', '$location_raw', '$scenario', '$is_fake');";
+    		} else { //Data from GSM
+        		$sql = "INSERT INTO gsm_data(lat,lng, accuracy, extra, status, provider, last_updated, location_raw, scenario, is_fake) " .
+            		" VALUES ('$lat','$lng', '$accuracy', '$extra', '$status', '$provider', '$last_updated', '$location_raw', '$scenario', '$is_fake');";
+    		}	
+	}
     if ($conn->query($sql) === true) {
          echo "INSERTED SUCCESS: " . $sql . "<br>";
          exit();
